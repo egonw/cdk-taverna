@@ -42,8 +42,8 @@
 	</properties>
 
 	<modules>
-		<module>cdk-taverna</module>
-		<module>cdk-taverna-ui</module>
+		<module>cdk-activity</module>
+		<module>cdk-activity-ui</module>
 	</modules>
 	<build>
 		<plugins>
