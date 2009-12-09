@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<artifactId>activities</artifactId>
-		<groupId>com.github.xwstaverna</groupId>
-		<version>0.1</version>
+		<groupId>com.github.cdktaverna</groupId>
+		<version>0.6</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.xwstaverna.activities</groupId>
-	<artifactId>xmpp-activity</artifactId>
-	<name>XMPP Activity</name>
+	<groupId>com.github.cdktaverna.activities</groupId>
+	<artifactId>cdk-activity</artifactId>
+	<name>CDK Activity</name>
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.taverna.t2</groupId>
@@ -29,14 +29,9 @@
 			<scope>test</scope>
 		</dependency>
                 <dependency>
-                        <groupId>jso</groupId>
-                        <artifactId>jso</artifactId>
-                        <version>0.12.5</version>
-                </dependency>
-                <dependency>
-                        <groupId>xws4j</groupId>
-                        <artifactId>xws4j</artifactId>
-                        <version>0.0.20090117</version>
+                        <groupId>cdk</groupId>
+                        <artifactId>cdk</artifactId>
+                        <version>1.3.1.0jchempaint020091203</version>
                 </dependency>
 		<dependency>
 			<groupId>junit</groupId>

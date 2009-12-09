@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<artifactId>activities</artifactId>
-		<groupId>com.github.xwstaverna</groupId>
-		<version>0.1</version>
+		<groupId>com.github.cdktaverna</groupId>
+		<version>0.6</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.xwstaverna.activities</groupId>
-	<artifactId>xmpp-activity-ui</artifactId>
-	<name>Taverna 2 XMPP Activity UI</name>
+	<groupId>com.github.cdktaverna.activities</groupId>
+	<artifactId>cdk-activity-ui</artifactId>
+	<name>Taverna 2 CDK Activity UI</name>
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.taverna.t2.workbench</groupId>
@@ -23,9 +23,9 @@
 			<version>${t2.workbench.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.xwstaverna.activities</groupId>
-			<artifactId>xmpp-activity</artifactId>
-			<version>0.1</version>
+			<groupId>com.github.cdktaverna.activities</groupId>
+			<artifactId>cdk-activity</artifactId>
+			<version>0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.taverna.t2.workbench</groupId>
