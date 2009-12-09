@@ -19,20 +19,28 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.query;
+package org.openscience.cdk.taverna.query;
 
-import net.sf.taverna.t2.partition.ActivityQuery;
+import javax.swing.Icon;
 
-public class XMPPQuery extends ActivityQuery {
+import org.openscience.cdk.taverna.XMPPActivity;
 
-	public XMPPQuery(String property) {
-		super(property);
+import net.sf.taverna.t2.workbench.activityicons.ActivityIconSPI;
+import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
+
+public class XMPPActivityIcon implements ActivityIconSPI{
+
+	public int canProvideIconScore(Activity<?> activity) {
+		if (activity.getClass().getName().equals(XMPPActivity.class.getName()))
+			return DEFAULT_ICON + 1;
+		else
+			return NO_ICON;
 	}
 
-	@Override
-	public void doQuery() {
-		add(new XMPPActivityItem());
-
+	public Icon getIcon(Activity<?> activity) {
+		return new XMPPActivityItem().getIcon();
 	}
 
 }
+
+

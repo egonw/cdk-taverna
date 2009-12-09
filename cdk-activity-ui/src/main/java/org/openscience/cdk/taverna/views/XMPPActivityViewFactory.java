@@ -19,23 +19,21 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.partition;
+package org.openscience.cdk.taverna.views;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.openscience.cdk.taverna.XMPPActivity;
 
-import net.sf.taverna.t2.activities.xmpp.query.XMPPActivityItem;
-import net.sf.taverna.t2.partition.PropertyExtractorSPI;
+import net.sf.taverna.t2.workbench.ui.actions.activity.ActivityContextualView;
+import net.sf.taverna.t2.workbench.ui.views.contextualviews.activity.ContextualViewFactory;
 
-public class XMPPPropertyExtractor implements PropertyExtractorSPI {
+public class XMPPActivityViewFactory implements ContextualViewFactory<XMPPActivity> {
+	
+	public boolean canHandle(Object object) {
+		return object instanceof XMPPActivity;
+	}
 
-	public Map<String, Object> extractProperties(Object target) {
-		Map<String,Object> map = new HashMap<String, Object>();
-		if (target instanceof XMPPActivityItem) {
-			XMPPActivityItem item = (XMPPActivityItem)target;
-			map.put("type", item.getType());
-		}
-		return map;
+	public ActivityContextualView<?> getView(XMPPActivity activity) {
+		return new XMPPActivityContextualView(activity);
 	}
 
 }

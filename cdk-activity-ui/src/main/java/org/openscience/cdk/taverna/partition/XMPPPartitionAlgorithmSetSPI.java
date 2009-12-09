@@ -19,57 +19,11 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp;
+package org.openscience.cdk.taverna.partition;
 
-public class XMPPConfigurationBean {
+import net.sf.taverna.t2.partition.ActivityPartitionAlgorithmSet;
 
-	private String clientJID = "edit me!"; // e.g. egonw@ws1.bmc.uu.se/home
-	private String password = "edit me!";  // e.g. SECRET
-	private String host = "edit me!";      // e.g. ws1.bmc.uu.se
-	private String port = "edit me!";      // e.g. 5222
-	private String serviceJID = "edit me!";// e.g. cdk.ws1.bmc.uu.se
-	private String function = "edit me!";  // e.g. calculateMass
+public class XMPPPartitionAlgorithmSetSPI extends ActivityPartitionAlgorithmSet {
 
-	public String getClientJID() {
-		return clientJID;
-	}
-	public void setClientJID(String value) {
-		clientJID = value;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String value) {
-		password = value;
-	}
-	
-	public String getHost() {
-		return host;
-	}
-	public void setHost(String value) {
-		host = value;
-	}
-	
-	public String getPort() {
-		return port;
-	}
-	public void setPort(String value) {
-		port = value;
-	}
-	
-	public String getServiceJID() {
-		return serviceJID;
-	}
-	public void setServiceJID(String value) {
-		serviceJID = value;
-	}
-	
-	public String getFunction() {
-		return function;
-	}
-	public void setFunction(String value) {
-		function = value;
-	}
 	
 }

@@ -19,15 +19,16 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.views;
+package org.openscience.cdk.taverna.views;
 
 import java.awt.Frame;
 
 import javax.swing.Action;
 
-import net.sf.taverna.t2.activities.xmpp.XMPPActivity;
-import net.sf.taverna.t2.activities.xmpp.XMPPConfigurationBean;
-import net.sf.taverna.t2.activities.xmpp.actions.XMPPActivityConfigurationAction;
+import org.openscience.cdk.taverna.XMPPActivity;
+import org.openscience.cdk.taverna.XMPPConfigurationBean;
+import org.openscience.cdk.taverna.actions.XMPPActivityConfigurationAction;
+
 import net.sf.taverna.t2.workbench.ui.actions.activity.HTMLBasedActivityContextualView;
 import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
 

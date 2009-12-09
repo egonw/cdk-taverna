@@ -19,20 +19,22 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.views;
+package org.openscience.cdk.taverna.query;
 
-import net.sf.taverna.t2.activities.xmpp.XMPPActivity;
-import net.sf.taverna.t2.workbench.ui.actions.activity.ActivityContextualView;
-import net.sf.taverna.t2.workbench.ui.views.contextualviews.activity.ContextualViewFactory;
+import net.sf.taverna.t2.partition.ActivityQuery;
+import net.sf.taverna.t2.partition.ActivityQueryFactory;
 
-public class XMPPActivityViewFactory implements ContextualViewFactory<XMPPActivity> {
-	
-	public boolean canHandle(Object object) {
-		return object instanceof XMPPActivity;
+public class XMPPQueryFactory extends ActivityQueryFactory {
+
+	@Override
+	protected ActivityQuery createQuery(String property) {
+		return new XMPPQuery(property);
 	}
 
-	public ActivityContextualView<?> getView(XMPPActivity activity) {
-		return new XMPPActivityContextualView(activity);
+	@Override
+	protected String getPropertyKey() {
+		return null;
 	}
+
 
 }

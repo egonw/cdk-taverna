@@ -19,49 +19,57 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.query;
+package org.openscience.cdk.taverna;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+public class XMPPConfigurationBean {
 
-import net.sf.taverna.t2.activities.xmpp.XMPPActivity;
-import net.sf.taverna.t2.activities.xmpp.XMPPConfigurationBean;
-import net.sf.taverna.t2.partition.AbstractActivityItem;
-import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
+	private String clientJID = "edit me!"; // e.g. egonw@ws1.bmc.uu.se/home
+	private String password = "edit me!";  // e.g. SECRET
+	private String host = "edit me!";      // e.g. ws1.bmc.uu.se
+	private String port = "edit me!";      // e.g. 5222
+	private String serviceJID = "edit me!";// e.g. cdk.ws1.bmc.uu.se
+	private String function = "edit me!";  // e.g. calculateMass
 
-public class XMPPActivityItem extends AbstractActivityItem {
-
-	public String getType() {
-		return "XMPP Cloud Service";
+	public String getClientJID() {
+		return clientJID;
 	}
-
-	@Override
-	public String toString() {
-		return getType();
+	public void setClientJID(String value) {
+		clientJID = value;
 	}
-
-	public Icon getIcon() {
-		return new ImageIcon(XMPPActivityItem.class
-				.getResource("/stringconstant.png"));
-	}
-
 	
-	@Override
-	public Object getConfigBean() {
-		XMPPConfigurationBean configbean = new XMPPConfigurationBean();
-		configbean.setClientJID("your Jabber ID");
-		configbean.setPassword("your Jabber password");
-		configbean.setServiceJID("the service JID");
-		configbean.setHost("your Jabber host");
-		configbean.setPort("your Jabber host port");
-		configbean.setFunction("your service function");
-		return configbean;
-		
+	public String getPassword() {
+		return password;
 	}
-
-	@Override
-	public Activity<?> getUnconfiguredActivity() {
-		return new XMPPActivity();
+	public void setPassword(String value) {
+		password = value;
 	}
-
+	
+	public String getHost() {
+		return host;
+	}
+	public void setHost(String value) {
+		host = value;
+	}
+	
+	public String getPort() {
+		return port;
+	}
+	public void setPort(String value) {
+		port = value;
+	}
+	
+	public String getServiceJID() {
+		return serviceJID;
+	}
+	public void setServiceJID(String value) {
+		serviceJID = value;
+	}
+	
+	public String getFunction() {
+		return function;
+	}
+	public void setFunction(String value) {
+		function = value;
+	}
+	
 }

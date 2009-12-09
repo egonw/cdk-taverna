@@ -19,11 +19,50 @@
  *  License along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  ******************************************************************************/
-package net.sf.taverna.t2.activities.xmpp.partition;
+package org.openscience.cdk.taverna.query;
 
-import net.sf.taverna.t2.partition.ActivityPartitionAlgorithmSet;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
-public class XMPPPartitionAlgorithmSetSPI extends ActivityPartitionAlgorithmSet {
+import org.openscience.cdk.taverna.XMPPActivity;
+import org.openscience.cdk.taverna.XMPPConfigurationBean;
+
+import net.sf.taverna.t2.partition.AbstractActivityItem;
+import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
+
+public class XMPPActivityItem extends AbstractActivityItem {
+
+	public String getType() {
+		return "XMPP Cloud Service";
+	}
+
+	@Override
+	public String toString() {
+		return getType();
+	}
+
+	public Icon getIcon() {
+		return new ImageIcon(XMPPActivityItem.class
+				.getResource("/stringconstant.png"));
+	}
 
 	
+	@Override
+	public Object getConfigBean() {
+		XMPPConfigurationBean configbean = new XMPPConfigurationBean();
+		configbean.setClientJID("your Jabber ID");
+		configbean.setPassword("your Jabber password");
+		configbean.setServiceJID("the service JID");
+		configbean.setHost("your Jabber host");
+		configbean.setPort("your Jabber host port");
+		configbean.setFunction("your service function");
+		return configbean;
+		
+	}
+
+	@Override
+	public Activity<?> getUnconfiguredActivity() {
+		return new XMPPActivity();
+	}
+
 }
