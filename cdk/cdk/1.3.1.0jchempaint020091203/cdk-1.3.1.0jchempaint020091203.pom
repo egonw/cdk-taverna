@@ -1,0 +1,25 @@
+<project>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cdk</groupId>
+  <artifactId>cdk</artifactId>
+  <name>cdk</name>
+  <version>1.3.1.0jchempaint020091203</version>
+  <url>http://cdk.sf.net/</url>
+  <ciManagement>
+    <notifiers>
+      <notifier>
+        <configuration>
+          <address>egonw@users.sf.net</address>
+        </configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
+  <inceptionYear>2009</inceptionYear>
+  <licenses>
+        <license>
+                <name>LGPL</name>
+        </license>
+  </licenses>
+</project>
+
