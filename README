@@ -1,0 +1,82 @@
+XWS-Taverna
+-----------
+
+Project for development of a Taverna2 plugin to be able to use XWS (XMPP IO-DATA) cloud services [0].
+
+A demo workflow as available at:
+
+http://www.myexperiment.org/workflows/631
+
+Or, to see some screenshots:
+
+http://chem-bla-ics.blogspot.com/2009/01/calling-xmpp-cloud-services-from.html
+
+License
+-------
+Copyright (C) 2007 University of Manchester
+              2009 Egon Willighagen
+
+License: LGPL, see COPYRIGHT.
+
+The JSO and XWS4J libraries also found in this git are LGPL too.
+
+Requirements
+------------
+
+Install the Maven2 Eclipse plugins from this update site [1]:
+
+http://m2eclipse.sonatype.org/update/
+
+Install
+-------
+
+Use git to get this project on your local disk. It is derived from t2activities, tag 
+'t2activities-0-4'.
+
+To compile the xmpp-activity and xmpp-activity-ui:
+
+mvn clean install
+
+Then, you need to tune the taverna-workbench-2-0/plugins/plugins.xml to include the following snippet,
+and tune the repository location to match your platform, etc:
+
+        <plugin>
+                <provider>taverna.sf.net</provider>
+                <identifier>com.github.xwstaverna.xmpp-activities</identifier>
+                <version>0.1</version>
+                <name>xmpp-activities</name>
+                <description>Taverna 2 XMPP activities</description>
+                <enabled>true</enabled>
+                <repositories>
+                        <repository>file:///home/egonw/.m2/repository</repository>
+                </repositories>
+                <profile>
+                        <dependency>
+                                <groupId>com.github.xwstaverna.activities</groupId>
+                                <artifactId>xmpp-activity</artifactId>
+                                <version>0.1</version>
+                        </dependency>
+                        <dependency>
+                                <groupId>com.github.xwstaverna.activities</groupId>
+                                <artifactId>xmpp-activity-ui</artifactId>
+                                <version>0.1</version>
+                        </dependency>
+                </profile>
+        </plugin>
+
+Update the repository path in the above snippet to not point to my $HOME, but to yours.
+
+Also copy the jso/ and xws4j/ folders into your local repository, such as
+$HOME/.m2/repository.
+
+Contact
+-------
+
+Jabber: egonw@jabber.org
+IRC: egonw @#cdk@irc.freenode.net
+
+References
+----------
+
+0.http://sourceforge.net/mailarchive/message.php?msg_name=a20e6fb10811140507w203ec8e1nac93e76369bf5792%40mail.gmail.com
+1.http://docs.codehaus.org/display/MAVENUSER/Eclipse+Integration
