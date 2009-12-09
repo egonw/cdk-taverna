@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>xws-taverna</name>
+	<name>cdk-taverna</name>
 	<comment></comment>
 	<projects>
 		<project>t2core</project>
