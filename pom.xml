@@ -8,14 +8,14 @@
 		<version>0.1.2008-11-03</version>
 	</parent>
 
-	<groupId>com.github.xwstaverna</groupId>
+	<groupId>com.github.cdktaverna</groupId>
 	<artifactId>activities</artifactId>
-	<version>0.1</version>
+	<version>0.6</version>
 	<packaging>pom</packaging>
 
-	<name>Taverna 2 XMPP Activity</name>
+	<name>CDK-Taverna2</name>
 	<description>
-		The Taverna 2 XMPP Activity.
+		The CDK plugin for Taverna 2.
 	</description>
 
 	<properties>
@@ -42,8 +42,8 @@
 	</properties>
 
 	<modules>
-		<module>xmpp-activity</module>
-		<module>xmpp-activity-ui</module>
+		<module>cdk-taverna</module>
+		<module>cdk-taverna-ui</module>
 	</modules>
 	<build>
 		<plugins>
@@ -209,14 +209,9 @@
 			<version>1.0</version>
 		</dependency>
                 <dependency>
-                        <groupId>xws4j</groupId>
-                        <artifactId>xws4j</artifactId>
-                        <version>0.0.20090117</version>
-                </dependency>
-                <dependency>
-                        <groupId>jso</groupId>
-                        <artifactId>jso</artifactId>
-                        <version>0.12.5</version>
+                        <groupId>cdk</groupId>
+                        <artifactId>cdk</artifactId>
+                        <version>1.3.1.0jchempaint020091203</version>
                 </dependency>
 	</dependencies>
 	</dependencyManagement>
