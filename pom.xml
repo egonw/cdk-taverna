@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>com.github.cdktaverna</groupId>
-	<artifactId>activities</artifactId>
+	<artifactId>cdk-activities</artifactId>
 	<version>0.6</version>
 	<packaging>pom</packaging>
 

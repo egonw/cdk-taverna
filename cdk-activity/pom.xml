@@ -3,12 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
-		<artifactId>activities</artifactId>
+		<artifactId>cdk-activities</artifactId>
 		<groupId>com.github.cdktaverna</groupId>
 		<version>0.6</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.cdktaverna.activities</groupId>
+	<groupId>com.github.cdktaverna</groupId>
 	<artifactId>cdk-activity</artifactId>
 	<name>CDK Activity</name>
 	<dependencies>
