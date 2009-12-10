@@ -1,1 +1,1 @@
-net.sf.taverna.t2.activities.xmpp.XMPPActivityHealthChecker
+org.openscience.cdk.taverna.SMILES2CMLActivityHealthChecker

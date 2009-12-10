@@ -1,1 +1,1 @@
-net.sf.taverna.t2.activities.xmpp.partition.XMPPPartitionAlgorithmSetSPI
+org.openscience.cdk.taverna.partition.SMILES2CMLPartitionAlgorithmSetSPI

@@ -1,1 +1,1 @@
-net.sf.taverna.t2.activities.xmpp.views.XMPPActivityViewFactory
+org.openscience.cdk.taverna.views.SMILES2CMLActivityViewFactory
