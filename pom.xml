@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>parent</artifactId>
-		<groupId>net.sf.taverna</groupId>
-		<version>0.1.2008-11-03</version>
+		<artifactId>taverna-workbench</artifactId>
+		<groupId>net.sf.taverna.t2</groupId>
+		<version>2.1-beta-2</version>
 	</parent>
 
 	<groupId>com.github.cdktaverna</groupId>
@@ -154,24 +154,17 @@
         </repository>
 	</repositories>
 	<dependencyManagement>
-	<dependencies>
-			<dependency>
-			<groupId>uk.org.mygrid.taverna.scufl</groupId>
-			<artifactId>scufl-model</artifactId>
-			<version>${taverna.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>uk.org.mygrid.taverna.raven
-					</groupId>
-					<artifactId>raven</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>uk.org.mygrid.taverna.raven
-					</groupId>
-					<artifactId>raven-log4j</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>	
+        <dependencies>
+		<dependency>
+			<groupId>net.sf.taverna.t2.core</groupId>
+			<artifactId>reference-api</artifactId>
+			<version>${t2.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.taverna.t2.core</groupId>
+			<artifactId>workflowmodel-api</artifactId>
+			<version>${t2.core.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
