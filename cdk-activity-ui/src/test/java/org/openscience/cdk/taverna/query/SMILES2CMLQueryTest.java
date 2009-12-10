@@ -34,7 +34,7 @@ public class SMILES2CMLQueryTest {
 		Query<?> q = new SMILES2CMLQuery(null);
 		q.doQuery();
 		assertEquals("There should be 1 item found",1,q.size());
-		assertTrue("The item should be a XMPPActivityItem",
+		assertTrue("The item should be a SMILES2CMLActivityItem",
 				q.toArray()[0] instanceof SMILES2CMLActivityItem);
 	}
 }

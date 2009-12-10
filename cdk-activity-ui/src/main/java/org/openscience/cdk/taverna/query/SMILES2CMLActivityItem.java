@@ -24,16 +24,16 @@ package org.openscience.cdk.taverna.query;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import org.openscience.cdk.taverna.SMILES2CMLActivity;
-import org.openscience.cdk.taverna.NoParametersConfigurationBean;
-
 import net.sf.taverna.t2.partition.AbstractActivityItem;
 import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
+
+import org.openscience.cdk.taverna.NoParametersConfigurationBean;
+import org.openscience.cdk.taverna.SMILES2CMLActivity;
 
 public class SMILES2CMLActivityItem extends AbstractActivityItem {
 
 	public String getType() {
-		return "XMPP Cloud Service";
+		return "SMILES 2 CML Activity";
 	}
 
 	@Override

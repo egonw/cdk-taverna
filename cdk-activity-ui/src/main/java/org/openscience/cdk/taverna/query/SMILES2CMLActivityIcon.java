@@ -23,10 +23,10 @@ package org.openscience.cdk.taverna.query;
 
 import javax.swing.Icon;
 
-import org.openscience.cdk.taverna.SMILES2CMLActivity;
-
 import net.sf.taverna.t2.workbench.activityicons.ActivityIconSPI;
 import net.sf.taverna.t2.workflowmodel.processor.activity.Activity;
+
+import org.openscience.cdk.taverna.SMILES2CMLActivity;
 
 public class SMILES2CMLActivityIcon implements ActivityIconSPI{
 
