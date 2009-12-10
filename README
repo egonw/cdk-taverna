@@ -41,33 +41,30 @@ Then, you need to tune the taverna-workbench-2-0/plugins/plugins.xml to include 
 and tune the repository location to match your platform, etc:
 
         <plugin>
-                <provider>taverna.sf.net</provider>
-                <identifier>com.github.xwstaverna.xmpp-activities</identifier>
-                <version>0.1</version>
-                <name>xmpp-activities</name>
-                <description>Taverna 2 XMPP activities</description>
+                <provider>www.cdk-taverna.de</provider>
+                <identifier>cdk-activities</identifier>
+                <version>0.6</version>
+                <name>cdk-activities</name>
+                <description>CDK for Taverna 2</description>
                 <enabled>true</enabled>
                 <repositories>
                         <repository>file:///home/egonw/.m2/repository</repository>
                 </repositories>
                 <profile>
                         <dependency>
-                                <groupId>com.github.xwstaverna.activities</groupId>
-                                <artifactId>xmpp-activity</artifactId>
-                                <version>0.1</version>
+                                <groupId>com.github.cdktaverna</groupId>
+                                <artifactId>cdk-activity</artifactId>
+                                <version>0.6</version>
                         </dependency>
                         <dependency>
-                                <groupId>com.github.xwstaverna.activities</groupId>
-                                <artifactId>xmpp-activity-ui</artifactId>
-                                <version>0.1</version>
+                                <groupId>com.github.cdktaverna</groupId>
+                                <artifactId>cdk-activity-ui</artifactId>
+                                <version>0.6</version>
                         </dependency>
                 </profile>
         </plugin>
 
 Update the repository path in the above snippet to not point to my $HOME, but to yours.
-
-Also copy the jso/ and xws4j/ folders into your local repository, such as
-$HOME/.m2/repository.
 
 Contact
 -------
