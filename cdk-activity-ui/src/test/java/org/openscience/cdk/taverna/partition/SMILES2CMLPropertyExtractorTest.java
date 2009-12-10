@@ -55,7 +55,7 @@ public class SMILES2CMLPropertyExtractorTest {
 		
 		Map<String,Object> props = new SMILES2CMLPropertyExtractor().extractProperties(item);
 
-		assertEquals("missing or incorrect property","SMILES2CML Service",props.get("type"));
+		assertEquals("missing or incorrect property","SMILES 2 CML Activity",props.get("type"));
 	}
 
 }
